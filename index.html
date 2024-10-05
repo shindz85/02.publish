@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title itemprop="name">Becon_Cloud</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.6 maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <script src="./_PC/js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./_PC/css/normalize.min.css">
+<style>
+* {margin:0;padding:0;}
+body {min-width:980px;padding:0 20px 50px 20px;font-family:'NotoSansKR','Malgun Gothic','맑은 고딕',Apple Gothic,arial,helvetica,sans-serif;font-size:12px;font-weight:600;}
+a {color:#444;text-decoration:none;}
+a:hover {color:#444;}
+a:visited, a:focus, a:active {color:#444;}
+
+.list_header {position:fixed;left:0;top:0;width:100%;padding:20px;background:#fff;box-sizing:border-box;z-index:10;}
+h1 {font-size:30px;margin:20px 0 10px 0;letter-spacing:-1px;font-weight:800;}
+h1 img {height:27px;margin:10px 5px 0 0;vertical-align:top;}
+.info {position:absolute;right:25px;top:40px;}
+.guide {margin:10px 0 5px 0;text-align:right;}
+
+#wrap {padding-top:200px;}
+.red {color:#e80000 !important}
+h2 {padding:10px 0 10px 15px;font-size:13px;border:1px solid #444;border-bottom:none;background:#595959;color:#fff;font-weight:500;}
+caption {display:none;}
+div.cont {border-top:1px solid #444;}
+table {border-collapse:collapse;width:100%;border-spacing:0;}
+table thead th {padding:7px 3px;border:1px solid #ccc;background:#eee;font-size:13px;}
+table tbody td {padding:7px 3px;background:#e5e5e5;border:1px solid #ccc;text-align:center;color:#898989;font-size:11px;color:rgba(0,0,0,0.2);  /*display:none;*/}
+table tbody td a {color:rgba(0,0,0,0.2);}
+table tbody td.left {padding:7px 10px;text-align:left;}
+table tbody td.url {padding:7px 10px;text-align:left;}
+table tbody tr.hidden td {display:table-cell;background:/*#e2e9e2*/#f5f5f5;color:#898989;text-decoration:line-through;opacity:1;}
+table tbody tr.temp td {display:table-cell;background:#dbe7e1;color:#444;opacity:1;}
+table tbody tr.ing td {display:table-cell;background:#fffbe6;color:#444;}
+table tbody tr.ed td {display:table-cell;background:#fff;color:#444;transition:all 0.4s}
+table tbody tr.ed.add td {display:table-cell;background:#d9eafd;color:#444;}
+table tbody tr.ed.mod td {display:table-cell;background:#d9eafd;color:#e80000 !important}
+table tbody tr.temp.mod td {display:table-cell;background:#d9eafd;color:#e80000 !important}
+table tbody tr.ed.cfm {text-decoration:line-through;}
+table tbody tr.ed:hover td {background:#0d643a;color:#fff;}
+table tbody tr.ed:hover td a, table tbody tr.ed:hover td .red {color:#fff !important;}
+table tbody tr.hidden a, table tbody tr.temp a, table tbody tr.ing a, table tbody tr.ed a {color:#444;}
+
+.tab {margin-bottom:10px;overflow:hidden;}
+.tab div {float:right;border-radius:5px;overflow:hidden;}
+.tab a {position:relative;float:left;width:100px;padding:10px 0;background:#eee;border-right:solid 1px #fff;font-size:13px;color:#666;text-align:center;transition:all 0.3s;}
+.tab a:last-child {border:none;}
+.tab a:hover {background:#ccc;}
+.tab a.on {background:#0d643a;color:#fff;}
+.tab a.on:hover {background:#06522d;}
+.proc_wrap {margin:30px 0 -10px 0;}
+.proc_wrap strong {color:#0d643a;font-weight:bold;}
+
+
+/* marker */
+.marker {position:absolute;right:350px;top:144px;}
+.marker li {position:relative;float:left;margin-right:15px;padding-left:17px;color:#666;list-style:none;}
+.marker li.dep {padding-right:25px;}
+.marker li:before {position:absolute;left:0;top:4px;width:12px;height:12px;content:"";}
+.marker li.m1:before {background:#999;}
+.marker li.s1:before {background:#53b100;}
+.marker li.s2:before {background:#0142b3;}
+.marker li.s3:before {background:#e30101;animation:over_a both linear infinite 1.3s;}
+.marker li.s4:before {background:#9622d2;}
+.marker li.s5:before {background:#f68500;}
+.marker:after {display:block;clear:both;height:0;content:"";overflow:hidden;}
+
+/* state */
+.state {display:inline-block;margin-left:10px;}
+.state i {display:inline-block;position:relative;width:12px;height:12px;margin-right:1px;border-radius:1px;vertical-align:middle;}
+.state i.m1 {background:#999;}
+.state i.s1 {background:#53b100;}
+.state i.s2 {background:#0142b3;}
+.state i.s3 {background:#e30101;animation:over_a both linear infinite 1.3s}
+.state i.s4 {background:#9622d2;}
+.state i.s5 {background:#f68500;}
+
+@keyframes over_a {
+0% {opacity:1;}
+40% {opacity:0.2;}
+60% {opacity:0.2;}
+100% {opacity:1;}
+}
+
+
+.ico {display:inline-block;height:20px;margin-left:5px;padding:0 5px;border-radius:2px;font-style:normal;font-size:11px;color:#fff;line-height:20px;}
+.ico.add {background:#019ee3;}
+.ico.modify {background:#e30101;}
+.ico.ing {background:#53b100;}
+
+.tab_list {overflow:hidden;}
+.tab_list li {float:left;list-style:none;}
+.tab_list li button {padding:15px 20px; color:#000; border:0; cursor:pointer; font-size:14px;}
+.tab_list li.active button {background-color:#595959; color:#fff;}
+
+#history-view pre {line-height:22px; font-size:14px;}
+</style>
+<script>
+    $(function(){
+        $.each($("td.url > a"), function(i,v){
+            $(v).text($(v).attr("href"));
+        });
+
+        var locN = $('tbody tr').length;
+        var locTemp = $('tbody tr.temp').length;
+        var locHidn = $('tbody tr.hidden').length;
+        var locEd = $('tbody tr.ed').length;
+        var locLine = $('tbody tr.line').length;
+
+        var locNa = locN - locTemp - locHidn - locLine;
+        var locTotalC = locEd/locNa;
+        var locTotal = locTotalC.toFixed(2) * 100;
+
+        $('.proc_wrap').append('<div class=\"proc\"><p>총 퍼블리싱 페이지 수 : <strong>' + locNa + '</strong></p><p>완료된 퍼블리싱 페이지 수 : <strong>' + locEd + '</strong></p><p>진척율 : <strong>' + locTotal + ' %</strong></p></div>');
+
+        $('#history-view pre').load('./history.txt');
+
+        $('.tab_list button').on('click' , function(){
+            $('.tab_list li').removeClass('active');
+            $(this).parent().addClass('active');
+            $('.tab_desc > div').hide();
+            $('.tab_desc > div').eq($(this).parent().index()).show();
+        })
+    });
+</script>
+</head>
+<body>
+    <div class="list_header">
+        <h1>Publishing List</h1>
+        <p class="info">2021.01.25 Last update</p>
+        <p class="guide"></p>
+        <div class="proc_wrap"></div>
+    </div>
+<style>
+
+</style>
+    <div id="wrap">
+
+        <ul class="tab_list">
+            <li class="active"><button type="button">@리스트</button></li>
+            <li><button type="button">@수정리스트</button></li>
+        </ul>
+
+        <div class="tab_desc">
+            <div id="list-wrap" style="display:block;">
+                <h2>메인</h2>
+                <div class="cont">
+                    <table>
+                        <colgroup>
+                            <col span="1" style="width:15%;">
+                            <col span="1" style="width:20%;">
+                            <col span="1" style="width:auto;">
+                            <col span="1" style="width:10%;">
+                            <col span="1" style="width:30%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">화면명</th>
+                                <th scope="col">URL</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="url"><a href="#" target="_blank">url</a></td>
+                                <td>2021.01.01</td>
+                                <td class="left">
+                                    <p></p>
+                                </td>
+                            </tr>
+                            -->
+                            <tr class="ed">
+                                <td class="left">페이지명</td>
+                                <td>화면명</td>
+                                <td class="url"><a href="./_MOBILE/page/TEST.html" target="_blank">TEST.html</a></td>
+                                <td>9999.99.99 99:99</td>
+                                <td class="left">
+                                    <p>이슈 내용</p>
+                                </td>
+                            </tr>
+                            <tr class="line">
+                                <td colspan="5">
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <hr style="padding:20px 0; border:0;">
+
+                <h2>팝업</h2>
+                <div class="cont">
+                    <table>
+                        <colgroup>
+                            <col span="1" style="width:15%;">
+                            <col span="1" style="width:20%;">
+                            <col span="1" style="width:auto;">
+                            <col span="1" style="width:10%;">
+                            <col span="1" style="width:30%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">화면명</th>
+                                <th scope="col">URL</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="ed">
+                                <td class="left">페이지명</td>
+                                <td>화면명</td>
+                                <td class="url"><a href="./_MOBILE/page/TEST.html" target="_blank">TEST.html</a></td>
+                                <td>9999.99.99 99:99</td>
+                                <td class="left">
+                                    <p>이슈 내용</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <hr style="padding:20px 0; border:0;">
+
+            </div>
+
+            <div id="history-view" style="display:none;">
+                <pre>
+                </pre>
+            </div>
+
+        </div>
+    </div><!-- // #wrap -->
+</body>
+</html>

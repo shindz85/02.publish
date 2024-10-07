@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximuscale=1.0, minimuscale=1.0, width=device-width, target-densitydpi=mediudpi">
+<title>가이드</title>
+<!-- <script type="text/javascript" src="../../../../js/jquery-1.12.4.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<!-- <script type="text/javascript" src="../../../../ko/js/slick.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../../../../ko/js/script.js"></script> -->
+<script src="https://gromo.github.io/jquery.scrollbar/jquery.scrollbar.js"></script>
+
+<!-- <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/a11y-light.css"> -->
+<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/agate.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css"> -->
+<script src="../comm/js/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/bash.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../css/style.css">
+
+<style>
+html,
+body {max-width:100%; width:100%; min-width:100%;}
+.wrapper {width:100%; margin:0 auto; transition: width 0.5s;}
+.wrapper h1 {margin-bottom:10px; padding-bottom:10px; font-size:30px; border-bottom:5px solid #000; font-weight:800;}
+.wrapper > h2 {margin-top:70px; margin-bottom:20px; padding-bottom:10px; font-size:20px; border-bottom:1px solid #000;}
+.preview_box {margin-bottom:15px;}
+.preview_box:after {content:''; clear:both; display:block;}
+pre {margin-bottom:50px;}
+pre code {white-space: pre;}
+.preview_flex {display:flex; align-items: flex-end; }
+.preview_flex .flex-item {}
+.preview_flex .flex-item.center {text-align:center;}
+.mt5 {margin-top:5px;}
+
+.sample_list-box {width:100%;}
+.sample_list-box ul {padding:0 10px; display:flex; justify-content: space-between;}
+.sample_list-box ul li {margin:0 10px;}
+/* .sample_list-box ul li:first-child {margin-left:20px;}
+.sample_list-box ul li:last-child {margin-right:20px;} */
+.sample_list-box ul li a {padding:15px; display: block; text-decoration: none; border:1px solid #000; border-radius:5px;}
+.sample_list-box ul li a h1 {padding:0; margin:0 0 10px 0; border:0;}
+.sample_list-box ul li a p {font-size:14px;}
+
+@media all and (max-width: 2000px) {
+
+}
+
+@media all and (max-width: 1600px) {
+
+}
+
+@media all and (max-width: 1280px) {
+
+}
+
+@media all and (max-width: 1024px) {
+
+}
+
+@media all and (max-width: 764px) {
+
+}
+
+@media all and (max-width: 480px) {
+
+}
+
+@media all and (max-width: 375px) {
+	.sample_list-box ul {flex-wrap: wrap;}
+	.sample_list-box ul li {width:calc(50% - 20px); margin-bottom:20px;}
+}
+
+@media all and (max-width: 360px) {
+
+	.sample_list-box ul li {width:100%;}
+}
+
+@media all and (max-width: 320px) {
+
+}
+
+
+
+
+</style>
+</head>
+<body>
+	<div class="wrapper">
+		<h2 style="margin-top:0;">INPUT</h2>
+		<div class="preview_box">
+			<div class="preview_flex">
+				<div style="flex:1; padding:0 20px;">
+					<div class="form_fieldset form-layout_2">
+						<div class="items">
+							<div class="form_head">
+								<label for="form05">연락처</label>
+							</div>
+							<div class="form_body">
+								<div class="textfd_wrap">
+									<input type="text" placeholder="연락처를 입력해 주세요." id="form05">
+									<p class="messg">error msg</p>
+								</div>
+							</div>
+						</div>
+						<div class="items">
+							<div class="form_head">
+								<label for="form06">회사(소속)</label>
+							</div>
+							<div class="form_body">
+								<div class="textfd_wrap">
+									<input type="text" placeholder="회사명 또는 소속기관을 입력해 주세요." id="form06">
+									<p class="messg">error msg</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form_fieldset">
+						<div class="form_head">
+							<label for="form01">이름</label>
+						</div>
+						<div class="form_body">
+							<div class="textfd_wrap">
+								<input type="text" placeholder="" id="form01">
+								<p class="messg">error msg</p>
+							</div>
+						</div>
+					</div>
+					<div class="form_fieldset">
+						<div class="form_head">
+							<label for="form02">이름</label>
+						</div>
+						<div class="form_body">
+							<div class="textfd_wrap is-success">
+								<input type="text" placeholder="" id="form02">
+								<p class="messg">error msg</p>
+							</div>
+						</div>
+					</div>
+					<div class="form_fieldset">
+						<div class="form_head">
+							<label for="form03">이름</label>
+						</div>
+						<div class="form_body">
+							<div class="textfd_wrap is-error">
+								<input type="text" placeholder="" id="form03">
+								<p class="messg">error msg</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="flex:1; padding:0 20px; background-color:#000">
+					<div class="form_fieldset form-layout_2 type01">
+						<div class="items">
+							<div class="form_head">
+								<label for="form05">연락처</label>
+							</div>
+							<div class="form_body">
+								<div class="textfd_wrap">
+									<input type="text" placeholder="연락처를 입력해 주세요." id="form05">
+									<p class="messg">error msg</p>
+								</div>
+							</div>
+						</div>
+						<div class="items">
+							<div class="form_head">
+								<label for="form06">회사(소속)</label>
+							</div>
+							<div class="form_body">
+								<div class="textfd_wrap">
+									<input type="text" placeholder="회사명 또는 소속기관을 입력해 주세요." id="form06">
+									<p class="messg">error msg</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form_fieldset type01">
+						<div class="form_head">
+							<label for="form01">이름</label>
+						</div>
+						<div class="form_body">
+							<div class="textfd_wrap">
+								<input type="text" placeholder="" id="form01">
+								<p class="messg">error msg</p>
+							</div>
+						</div>
+					</div>
+					<div class="form_fieldset type01">
+						<div class="form_head">
+							<label for="form02">이름</label>
+						</div>
+						<div class="form_body">
+							<div class="textfd_wrap is-success">
+								<input type="text" placeholder="" id="form02">
+								<p class="messg">error msg</p>
+							</div>
+						</div>
+					</div>
+					<div class="form_fieldset type01">
+						<div class="form_head">
+							<label for="form03">이름</label>
+						</div>
+						<div class="form_body">
+							<div class="textfd_wrap is-error">
+								<input type="text" placeholder="" id="form03">
+								<p class="messg">error msg</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- <pre>
+<code class="html">
+&lt;div&gt;
+	code
+	&lt;div&gt;
+		code
+	&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre> -->
+		<h2>SELECT</h2>
+		<div class="preview_box">
+			<div class="preview_flex">
+				<div style="flex:1; padding:0 20px;">
+					<div class="form_fieldset">
+						<div class="form_head">
+							<label for="form01">문의 유형</label>
+						</div>
+						<div class="form_body">
+							<div class="common-select_box">
+								<select name="" id="form01">
+									<option value="">문의 유형을 선택해 주세요.1</option>
+									<option value="">문의 유형을 선택해 주세요.2</option>
+									<option value="">문의 유형을 선택해 주세요.3</option>
+								</select>
+								<p class="messg">error msg</p>
+							</div>
+						</div>
+					</div>
+					<div class="form_fieldset">
+						<div class="form_head">
+							<label for="form01">문의 유형</label>
+						</div>
+						<div class="form_body">
+							<div class="common-select_box">
+								<select name="" id="form01" disabled>
+									<option value="">문의 유형을 선택해 주세요.1</option>
+									<option value="">문의 유형을 선택해 주세요.2</option>
+									<option value="">문의 유형을 선택해 주세요.3</option>
+								</select>
+								<p class="messg">error msg</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="flex:1; padding:0 20px; background-color:#000">
+					<div class="form_fieldset type01">
+						<div class="form_head">
+							<label for="form01">문의 유형</label>
+						</div>
+						<div class="form_body">
+							<div class="common-select_box">
+								<select name="" id="form01">
+									<option value="">문의 유형을 선택해 주세요.1</option>
+									<option value="">문의 유형을 선택해 주세요.2</option>
+									<option value="">문의 유형을 선택해 주세요.3</option>
+								</select>
+								<p class="messg">error msg</p>
+							</div>
+						</div>
+					</div>
+					<div class="form_fieldset type01">
+						<div class="form_head">
+							<label for="form01">문의 유형</label>
+						</div>
+						<div class="form_body">
+							<div class="common-select_box">
+								<select name="" id="form01" disabled>
+									<option value="">문의 유형을 선택해 주세요.1</option>
+									<option value="">문의 유형을 선택해 주세요.2</option>
+									<option value="">문의 유형을 선택해 주세요.3</option>
+								</select>
+								<p class="messg">error msg</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<h2>TEXTAREA</h2>
+		<div class="preview_box">
+			<div class="preview_flex">
+				<div style="flex:1; padding:0 20px;">
+					<div class="form_fieldset">
+						<div class="form_head">
+							<label for="form06">문의 내용</label>
+						</div>
+						<div class="form_body">
+							<div class="textarea_wrap">
+								<textarea id="textarea_label" placeholder="문의 내용을 입력해 주세요." id="form06"></textarea>
+								<p class="messg">error msg</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="flex:1; padding:0 20px; background-color:#000">
+					<div class="form_fieldset type01">
+						<div class="form_head">
+							<label for="form06">문의 내용</label>
+						</div>
+						<div class="form_body">
+							<div class="textarea_wrap">
+								<textarea id="textarea_label" placeholder="문의 내용을 입력해 주세요." id="form06"></textarea>
+								<p class="messg">error msg</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<h2>RADIO &amp; CHECKBOX</h2>
+		<div class="preview_box">
+			<div class="preview_flex">
+				<div style="flex:1; padding:0 20px;">
+					<div class="btm_choice_area">
+						<input type="checkbox" id="formChk">
+						<label for="formChk">TEXT</label>
+					</div>
+					<div class="btm_choice_area">
+						<input type="checkbox" id="formChk" checked>
+						<label for="formChk">TEXT</label>
+					</div>
+					<div class="btm_choice_area">
+						<input type="checkbox" id="formChk" disabled>
+						<label for="formChk">TEXT</label>
+					</div>
+					<div class="btm_choice_area">
+						<input type="checkbox" id="formChk" checked disabled>
+						<label for="formChk">TEXT</label>
+					</div>
+					<div class="btm_choice_area">
+						<input type="radio" id="formChk">
+						<label for="formChk">TEXT</label>
+					</div>
+					<div class="btm_choice_area">
+						<input type="radio" id="formChk" checked>
+						<label for="formChk">TEXT</label>
+					</div>
+					<!-- <div class="btm_choice_area">
+						<input type="radio" id="formChk" disabled>
+						<label for="formChk">TEXT</label>
+					</div> -->
+					<!-- <div class="btm_choice_area">
+						<input type="radio" id="formChk" checked disabled>
+						<label for="formChk">TEXT</label>
+					</div> -->
+				</div>
+				<div style="flex:1; padding:0 20px; background-color:#000">
+					<div class="btm_choice_area type01">
+						<input type="checkbox" id="formChk">
+						<label for="formChk">TEXT</label>
+					</div>
+					<div class="btm_choice_area type01">
+						<input type="checkbox" id="formChk" checked>
+						<label for="formChk">TEXT</label>
+					</div>
+					<div class="btm_choice_area type01">
+						<input type="checkbox" id="formChk" disabled>
+						<label for="formChk">TEXT</label>
+					</div>
+					<div class="btm_choice_area type01">
+						<input type="checkbox" id="formChk" checked disabled>
+						<label for="formChk">TEXT</label>
+					</div>
+					<div class="btm_choice_area type01">
+						<input type="radio" id="formChk">
+						<label for="formChk">TEXT</label>
+					</div>
+					<div class="btm_choice_area type01">
+						<input type="radio" id="formChk" checked>
+						<label for="formChk">TEXT</label>
+					</div>
+					<!-- <div class="btm_choice_area type01">
+						<input type="radio" id="formChk" disabled>
+						<label for="formChk">TEXT</label>
+					</div>
+					<div class="btm_choice_area type01">
+						<input type="radio" id="formChk" checked disabled>
+						<label for="formChk">TEXT</label>
+					</div> -->
+				</div>
+			</div>
+		</div>
+
+		<h2>SCROLL BOX</h2>
+		<div class="preview_box">
+			<div class="preview_flex">
+				<div style="flex:1; padding:0 20px;">
+					<div class="form_fieldset">
+						<div class="provision_box">
+							개인정보보호법에 따라 네이버에 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간, 동의 거부권 및 동의 거부 시 불이익에 관한 사항을 안내 드리오니 자세히 읽은 후 동의하여 주시기 바랍니다.<br>
+						1. 수집하는 개인정보<br>
+						이용자는 회원가입을 하지 않아도 정보 검색, 뉴스 보기 등 대부분의 네이버 서비스를 회원과 동일하게 이용할 수 있습니다. 이용자가 메일, 캘린더, 카페, 블로그 등과 같이 개인화 혹은 회원제 서비스를 이용하기 위해 회원가입을 할 경우, 네이버는 서비스 이용을 위해 필요한 최소한의 개인정보를 수집합니다.<br><br>
+
+						회원가입 시점에 네이버가 이용자로부터 수집하는 개인정보는 아래와 같습니다.<br>
+						- 회원 가입 시에 ‘아이디, 비밀번호, 이름, 생년월일, 성별, 휴대전화번호’를 필수항목으로 수집합니다. 만약 이용자가 입력하는 생년월일이 만14세 미만 아동일 경우에는 법정대리인 정보(법정대리인의 이름, 생년월일, 성별, 중복가입확인정보(DI), 휴대전화번호)를 추가로 수집합니다. 그리고 선택항목으로 이메일 주소를 수집합니다.<br>
+						- 단체아이디로 회원가입 시 단체아이디, 비밀번호, 단체이름, 이메일주소, 휴대전화번호를 필수항목으로 수집합니다. 그리고 단체 대표자명을 선택항목으로 수집합니다.
+						서비스 이용 과정에서 이용자로부터 수집하는 개인정보는 아래와 같습니다.<br>
+						- 회원정보 또는 개별 서비스에서 프로필 정보(별명, 프로필 사진)를 설정할 수 있습니다. 회원정보에 별명을 입력하지 않은 경우에는 마스킹 처리된 아이디가 별명으로 자동 입력됩니다.<br><br>
+
+						- 네이버 내의 개별 서비스 이용, 이벤트 응모 및 경품 신청 과정에서 해당 서비스의 이용자에 한해 추가 개인정보 수집이 발생할 수 있습니다. 추가로 개인정보를 수집할 경우에는 해당 개인정보 수집 시점에서 이용자에게 ‘수집하는 개인정보 항목, 개인정보의 수집 및 이용목적, 개인정보의 보관기간’에 대해 안내 드리고 동의를 받습니다.<br><br>
+
+						</div>
+					</div>
+				</div>
+				<div style="flex:1; padding:0 20px; background-color:#000">
+					<div class="form_fieldset type01">
+						<div class="provision_box">
+							개인정보보호법에 따라 네이버에 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간, 동의 거부권 및 동의 거부 시 불이익에 관한 사항을 안내 드리오니 자세히 읽은 후 동의하여 주시기 바랍니다.<br>
+						1. 수집하는 개인정보<br>
+						이용자는 회원가입을 하지 않아도 정보 검색, 뉴스 보기 등 대부분의 네이버 서비스를 회원과 동일하게 이용할 수 있습니다. 이용자가 메일, 캘린더, 카페, 블로그 등과 같이 개인화 혹은 회원제 서비스를 이용하기 위해 회원가입을 할 경우, 네이버는 서비스 이용을 위해 필요한 최소한의 개인정보를 수집합니다.<br><br>
+
+						회원가입 시점에 네이버가 이용자로부터 수집하는 개인정보는 아래와 같습니다.<br>
+						- 회원 가입 시에 ‘아이디, 비밀번호, 이름, 생년월일, 성별, 휴대전화번호’를 필수항목으로 수집합니다. 만약 이용자가 입력하는 생년월일이 만14세 미만 아동일 경우에는 법정대리인 정보(법정대리인의 이름, 생년월일, 성별, 중복가입확인정보(DI), 휴대전화번호)를 추가로 수집합니다. 그리고 선택항목으로 이메일 주소를 수집합니다.<br>
+						- 단체아이디로 회원가입 시 단체아이디, 비밀번호, 단체이름, 이메일주소, 휴대전화번호를 필수항목으로 수집합니다. 그리고 단체 대표자명을 선택항목으로 수집합니다.
+						서비스 이용 과정에서 이용자로부터 수집하는 개인정보는 아래와 같습니다.<br>
+						- 회원정보 또는 개별 서비스에서 프로필 정보(별명, 프로필 사진)를 설정할 수 있습니다. 회원정보에 별명을 입력하지 않은 경우에는 마스킹 처리된 아이디가 별명으로 자동 입력됩니다.<br><br>
+
+						- 네이버 내의 개별 서비스 이용, 이벤트 응모 및 경품 신청 과정에서 해당 서비스의 이용자에 한해 추가 개인정보 수집이 발생할 수 있습니다. 추가로 개인정보를 수집할 경우에는 해당 개인정보 수집 시점에서 이용자에게 ‘수집하는 개인정보 항목, 개인정보의 수집 및 이용목적, 개인정보의 보관기간’에 대해 안내 드리고 동의를 받습니다.<br><br>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<h2>BUTTON</h2>
+		<div class="preview_box">
+			<div class="preview_flex" style="align-items:center;">
+				<div style="background-color:#000; padding:5px;">
+					<a href="#self" class="common-btn is-white"><span>문의하기</span></a>
+					<a href="#self" class="common-btn is-white"><span>문의하기</span><i class="icon link-download2"></i></a>
+				</div>
+
+				<a href="#self" class="common-btn is-white2"><span>담당자 문의하기</span></a>
+				<a href="#self" class="common-btn is-white2"><span>소개자료 보기</span><i class="icon link-arrow"></i></a>
+				<a href="#self" class="common-btn is-white2"><span>비전가치체계도</span><i class="icon link-blank"></i></a>
+				<a href="#self" class="common-btn is-white2"><span>국문 AI 파일</span><i class="icon link-download"></i></a>
+
+			</div>
+		</div>
+
+		<h2>HASH TAG</h2>
+		<div class="preview_box">
+			<div class="preview_flex">
+				<div class="hash_area">
+					<a href="#self" class="hash_tag">#CJ_ONE</a>
+					<a href="#self" class="hash_tag">#CJ_ONE</a>
+				</div>
+			</div>
+		</div>
+
+
+
+
+	</div>
+<script>
+	hljs.initHighlightingOnLoad();
+
+	function setHeight(){
+		$("#iframe_guide",parent.document).height($('.wrapper').height() + 150);
+	}
+
+	setTimeout(setHeight,500)
+
+	function customScrollY(target){
+		var $target = $(target);
+		$target.each(function(){
+			$(this).scrollbar();
+		});
+	};
+
+
+	$(window).on('resize' , function(){
+		setHeight();
+	})
+
+	$(function(){
+		customScrollY('.provision_box');
+	})
+
+</script>
+</body>
+</html>

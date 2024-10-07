@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximuscale=1.0, minimuscale=1.0, width=device-width, target-densitydpi=mediudpi">
+<title>페이지 리스트</title>
+<link rel="stylesheet" media="all" href="../comm/css/base.css">
+<script src="../comm/js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<!-- container -->
+<section id="g-container">
+
+	<!-- tab -->
+	<!--
+	<ul class="tab">
+		<li class="on"><a href="pagelist-a000.html">국문</a></li>
+        <li><a href="pagelist-a001.html">영문</a></li>
+        <li><a href="pagelist-a002.html">중문</a></li>
+	</ul>
+	-->
+
+	<!-- qwe -->
+	<div class="qwe">
+		<dl class="total">
+			<!--dt>Total :</dt>
+			<dd class="total-page"></dd>
+			<dt>완료 :</dt>
+			<dd class="complete"></dd>
+			<dt>완료 대기 :</dt>
+			<dd class="wait"></dd>
+			<dt>수정 :</dt>
+			<dd class="mdf"></dd>
+			<dt>수정 대기 :</dt>
+			<dd class="mdf-wait"></dd -->
+			<dd class="">
+				<img src="../comm/images/selected_no.gif"> 삭제&nbsp;&nbsp;&nbsp;&nbsp;
+				<img src="../comm/images/selected_yes.gif"> 완료&nbsp;&nbsp;&nbsp;&nbsp;
+				<img src="../comm/images/selected_yes2.gif"> 검수전
+				<span style="background:#ffffcc;"></span> 확인필요 <!-- tr class : bg1 -->
+				<span style="background:#f9e3eb;"></span> 이슈 <!-- tr class : bg2 -->
+				<span style="background:#e0f6fd"></span> 기타 <!-- tr class : bg3 -->
+			</dd>
+		</dl>
+	</div>
+
+	<!-- ************************************************************************************************** -->
+	<h2 class="g-h2">공통</h2>
+	<!-- ************************************************************************************************** -->
+	<table class="g-table tableHover">
+		<colgroup>
+			<col style="width:200px;">
+			<col style="width:145px;">
+			<col style="width:210px;">
+			<col style="width:125px;">
+			<col style="width:125px;">
+			<col style="width:170px;">
+			<col style="width:100px;">
+			<col>
+		</colgroup>
+		<thead>
+		<tr>
+			<th>1 Depth</th>
+			<th>2 Depth</th>
+			<th>3 Depth</th>
+			<th>4 Depth</th>
+			<th>5 Depth</th>
+			<th>파일명</th>
+			<th>완료일</th>
+			<th>description</th>
+		</tr>
+		</thead>
+		<tbody>
+		<!-- <tr>
+			<th></th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="al"><a href="#" target="_blank">파일명</a></td>
+			<td class="ac">2022-01-01</td>
+			<td>
+				<p></p>
+			</td>
+		</tr> -->
+		<tr>
+			<th>공통</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="al"><a href="../../../../page/index.html" target="_blank">common.html</a></td>
+			<td class="ac">2022-01-01</td>
+			<td>
+				<p>설명</p>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+
+	<!-- ************************************************************************************************** -->
+	<h2 class="g-h2">회원가입</h2>
+	<!-- ************************************************************************************************** -->
+	<table class="g-table tableHover">
+		<colgroup>
+			<col style="width:200px;">
+			<col style="width:145px;">
+			<col style="width:210px;">
+			<col style="width:125px;">
+			<col style="width:125px;">
+			<col style="width:170px;">
+			<col style="width:100px;">
+			<col>
+		</colgroup>
+		<thead>
+		<tr>
+			<th>1 Depth</th>
+			<th>2 Depth</th>
+			<th>3 Depth</th>
+			<th>4 Depth</th>
+			<th>5 Depth</th>
+			<th>파일명</th>
+			<th>완료일</th>
+			<th>description</th>
+		</tr>
+		</thead>
+		<tbody>
+		<!-- <tr>
+			<th></th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="al"><a href="#" target="_blank">파일명</a></td>
+			<td class="ac">2022-01-01</td>
+			<td>
+				<p></p>
+			</td>
+		</tr> -->
+		<tr>
+			<th>Step.01 국가 선택 / 약관동의</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="al"><a href="#" target="_blank">logn_meber_01.html</a></td>
+			<td class="ac">2024-12-31</td>
+			<td>
+				<p></p>
+			</td>
+		</tr>
+		<tr>
+			<th>Step.01 국가 선택 / 약관동의</th>
+			<td>약관 상세</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="al"><a href="#" target="_blank">logn_meber_01_p01.html</a></td>
+			<td class="ac">2024-12-31</td>
+			<td>
+				<p></p>
+			</td>
+		</tr>
+		<tr>
+			<th>Step.02 계정 생성</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="al"><a href="#" target="_blank">logn_meber_02.html</a></td>
+			<td class="ac">2024-12-31</td>
+			<td>
+				<p></p>
+			</td>
+		</tr>
+		<tr>
+			<th>Step.03 가입 완료/사업자 승인 안내</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="al"><a href="#" target="_blank">logn_meber_03.html</a></td>
+			<td class="ac">2024-12-31</td>
+			<td>
+				<p></p>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+
+	<!-- ************************************************************************************************** -->
+	<h2 class="g-h2">로그인</h2>
+	<!-- ************************************************************************************************** -->
+	<table class="g-table tableHover">
+		<colgroup>
+			<col style="width:200px;">
+			<col style="width:145px;">
+			<col style="width:210px;">
+			<col style="width:125px;">
+			<col style="width:125px;">
+			<col style="width:170px;">
+			<col style="width:100px;">
+			<col>
+		</colgroup>
+		<thead>
+		<tr>
+			<th>1 Depth</th>
+			<th>2 Depth</th>
+			<th>3 Depth</th>
+			<th>4 Depth</th>
+			<th>5 Depth</th>
+			<th>파일명</th>
+			<th>완료일</th>
+			<th>description</th>
+		</tr>
+		</thead>
+		<tbody>
+		<!-- <tr>
+			<th></th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="al"><a href="#" target="_blank">파일명</a></td>
+
+			<td class="ac">2022-01-01</td>
+			<td>
+				<p></p>
+			</td>
+		</tr> -->
+		<tr>
+			<th>공통관리</th>
+			<td>화면관리</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="al"><a href="../../../../page/MN001M01.html" target="_blank">MN001M01.html</a></td>
+
+			<td class="ac">2022-01-01</td>
+			<td>
+				<p></p>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+
+	<!-- ************************************************************************************************** -->
+	<h2 class="g-h2">ID/PW 찾기</h2>
+	<!-- ************************************************************************************************** -->
+	<table class="g-table tableHover">
+		<colgroup>
+			<col style="width:200px;">
+			<col style="width:145px;">
+			<col style="width:210px;">
+			<col style="width:125px;">
+			<col style="width:125px;">
+			<col style="width:170px;">
+			<col style="width:100px;">
+			<col>
+		</colgroup>
+		<thead>
+		<tr>
+			<th>1 Depth</th>
+			<th>2 Depth</th>
+			<th>3 Depth</th>
+			<th>4 Depth</th>
+			<th>5 Depth</th>
+			<th>파일명</th>
+			<th>완료일</th>
+			<th>description</th>
+		</tr>
+		</thead>
+		<tbody>
+		<!-- <tr>
+			<th></th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="al"><a href="#" target="_blank">파일명</a></td>
+
+			<td class="ac">2022-01-01</td>
+			<td>
+				<p></p>
+			</td>
+		</tr> -->
+		<tr>
+			<th>회원가입 인증번호</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="al"><a href="../../../../mail/회원가입_인증번호.html" target="_blank">회원가입_인증번호.html</a></td>
+			<td class="ac">2022-01-01</td>
+			<td>
+				<p></p>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+
+	<!-- ************************************************************************************************** -->
+	<h2 class="g-h2">대시보드</h2>
+	<!-- ************************************************************************************************** -->
+	<table class="g-table tableHover">
+		<colgroup>
+			<col style="width:200px;">
+			<col style="width:145px;">
+			<col style="width:210px;">
+			<col style="width:125px;">
+			<col style="width:125px;">
+			<col style="width:170px;">
+			<col style="width:100px;">
+			<col>
+		</colgroup>
+		<thead>
+		<tr>
+			<th>1 Depth</th>
+			<th>2 Depth</th>
+			<th>3 Depth</th>
+			<th>4 Depth</th>
+			<th>5 Depth</th>
+			<th>파일명</th>
+			<th>완료일</th>
+			<th>description</th>
+		</tr>
+		</thead>
+		<tbody>
+		<!-- <tr>
+			<th></th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="al"><a href="#" target="_blank">파일명</a></td>
+
+			<td class="ac">2022-01-01</td>
+			<td>
+				<p></p>
+			</td>
+		</tr> -->
+		<tr>
+			<th>회원가입 인증번호</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="al"><a href="../../../../mail/회원가입_인증번호.html" target="_blank">회원가입_인증번호.html</a></td>
+			<td class="ac">2022-01-01</td>
+			<td>
+				<p></p>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+
+	<!-- ************************************************************************************************** -->
+	<h2 class="g-h2">현장</h2>
+	<!-- ************************************************************************************************** -->
+	<table class="g-table tableHover">
+		<colgroup>
+			<col style="width:200px;">
+			<col style="width:145px;">
+			<col style="width:210px;">
+			<col style="width:125px;">
+			<col style="width:125px;">
+			<col style="width:170px;">
+			<col style="width:100px;">
+			<col>
+		</colgroup>
+		<thead>
+		<tr>
+			<th>1 Depth</th>
+			<th>2 Depth</th>
+			<th>3 Depth</th>
+			<th>4 Depth</th>
+			<th>5 Depth</th>
+			<th>파일명</th>
+			<th>완료일</th>
+			<th>description</th>
+		</tr>
+		</thead>
+		<tbody>
+		<!-- <tr>
+			<th></th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="al"><a href="#" target="_blank">파일명</a></td>
+
+			<td class="ac">2022-01-01</td>
+			<td>
+				<p></p>
+			</td>
+		</tr> -->
+		<tr>
+			<th>회원가입 인증번호</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="al"><a href="../../../../mail/회원가입_인증번호.html" target="_blank">회원가입_인증번호.html</a></td>
+			<td class="ac">2022-01-01</td>
+			<td>
+				<p></p>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+
+	<!-- ************************************************************************************************** -->
+	<h2 class="g-h2">관리</h2>
+	<!-- ************************************************************************************************** -->
+	<table class="g-table tableHover">
+		<colgroup>
+			<col style="width:200px;">
+			<col style="width:145px;">
+			<col style="width:210px;">
+			<col style="width:125px;">
+			<col style="width:125px;">
+			<col style="width:170px;">
+			<col style="width:100px;">
+			<col>
+		</colgroup>
+		<thead>
+		<tr>
+			<th>1 Depth</th>
+			<th>2 Depth</th>
+			<th>3 Depth</th>
+			<th>4 Depth</th>
+			<th>5 Depth</th>
+			<th>파일명</th>
+			<th>완료일</th>
+			<th>description</th>
+		</tr>
+		</thead>
+		<tbody>
+		<!-- <tr>
+			<th></th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="al"><a href="#" target="_blank">파일명</a></td>
+
+			<td class="ac">2022-01-01</td>
+			<td>
+				<p></p>
+			</td>
+		</tr> -->
+		<tr>
+			<th>회원가입 인증번호</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="al"><a href="../../../../mail/회원가입_인증번호.html" target="_blank">회원가입_인증번호.html</a></td>
+			<td class="ac">2022-01-01</td>
+			<td>
+				<p></p>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+
+	<!-- ************************************************************************************************** -->
+	<h2 class="g-h2">공지사항</h2>
+	<!-- ************************************************************************************************** -->
+	<table class="g-table tableHover">
+		<colgroup>
+			<col style="width:200px;">
+			<col style="width:145px;">
+			<col style="width:210px;">
+			<col style="width:125px;">
+			<col style="width:125px;">
+			<col style="width:170px;">
+			<col style="width:100px;">
+			<col>
+		</colgroup>
+		<thead>
+		<tr>
+			<th>1 Depth</th>
+			<th>2 Depth</th>
+			<th>3 Depth</th>
+			<th>4 Depth</th>
+			<th>5 Depth</th>
+			<th>파일명</th>
+			<th>완료일</th>
+			<th>description</th>
+		</tr>
+		</thead>
+		<tbody>
+		<!-- <tr>
+			<th></th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="al"><a href="#" target="_blank">파일명</a></td>
+
+			<td class="ac">2022-01-01</td>
+			<td>
+				<p></p>
+			</td>
+		</tr> -->
+		<tr>
+			<th>회원가입 인증번호</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="al"><a href="../../../../mail/회원가입_인증번호.html" target="_blank">회원가입_인증번호.html</a></td>
+			<td class="ac">2022-01-01</td>
+			<td>
+				<p></p>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+
+	<!-- ************************************************************************************************** -->
+	<h2 class="g-h2">더보기</h2>
+	<!-- ************************************************************************************************** -->
+	<table class="g-table tableHover">
+		<colgroup>
+			<col style="width:200px;">
+			<col style="width:145px;">
+			<col style="width:210px;">
+			<col style="width:125px;">
+			<col style="width:125px;">
+			<col style="width:170px;">
+			<col style="width:100px;">
+			<col>
+		</colgroup>
+		<thead>
+		<tr>
+			<th>1 Depth</th>
+			<th>2 Depth</th>
+			<th>3 Depth</th>
+			<th>4 Depth</th>
+			<th>5 Depth</th>
+			<th>파일명</th>
+			<th>완료일</th>
+			<th>description</th>
+		</tr>
+		</thead>
+		<tbody>
+		<!-- <tr>
+			<th></th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="al"><a href="#" target="_blank">파일명</a></td>
+
+			<td class="ac">2022-01-01</td>
+			<td>
+				<p></p>
+			</td>
+		</tr> -->
+		<tr>
+			<th>회원가입 인증번호</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="al"><a href="../../../../mail/회원가입_인증번호.html" target="_blank">회원가입_인증번호.html</a></td>
+			<td class="ac">2022-01-01</td>
+			<td>
+				<p></p>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+
+
+</section>
+
+
+
+
+
+
+
+<script>
+$(document).ready(function(){
+	// table
+	$("table").each(function(i){
+
+		if( $(this).hasClass("tableHover") )
+		{
+			$(this).find("tbody tr").hover(function(){
+				$(this).addClass(" on");
+			}, function(){
+				$(this).removeClass(" on");
+			});
+			return ;
+		}
+	});
+
+	var $trTotal = $('.g-table tbody tr').length,
+		$bg1 = $('.g-table tbody tr.bg1').length,
+		$bg2 = $('.g-table tbody tr.bg2').length,
+		$bg3 = $('.g-table tbody tr.bg3').length;
+
+
+	// if($('.g-table tbody tr').not('tr.bg1, tr.bg2, tr.bg3').find("img[src$='selected_yes.gif']").length == 2){
+	// 	$('.g-table tbody tr').not('tr.bg1, tr.bg2, tr.bg3').addClass('complete');
+	// }
+
+	$('.g-table tbody tr').not('tr.bg1, tr.bg2, tr.bg3').each(function(){
+		$(this).find('td').each(function(){
+			if($(this).find("img[src$='selected_yes.gif']").length){
+				$(this).addClass('complete');
+			};
+		});
+	});
+
+	var $currentKr = $('td:nth-child(7).complete').length;
+	var $currentEn = $('td:nth-child(9).complete').length;
+
+
+	$('.tr-current-kr').text($currentKr);
+	$('.tr-current-en').text($currentEn);
+	$('.tr-total').text($trTotal - $bg1 - $bg2 - $bg3);
+	$('.tr-percent-kr').text(Math.round($currentKr * 100 / ($trTotal - $bg1 - $bg2 - $bg3)));
+	$('.tr-percent-en').text(Math.round($currentEn * 100 / ($trTotal - $bg1 - $bg2 - $bg3)));
+
+});
+
+</script>
+</body>
+</html>

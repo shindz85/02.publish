@@ -12,9 +12,235 @@
     <script src="../js/script.js"></script>
     <link href="../css/style.css" rel="stylesheet">
 </head>
-
+<style>
+    body.overflow {overflow:hidden;}
+#wrap {width:100vw;}
+header {width:100%; height:60px; position:sticky; top:0; background-color:red}
+main {width:100%; height:calc(var(--vh, 1vh) * 100 - 120px); overflow-y:auto;}
+main div {}
+footer {width:100%; height:60px; position:fixed; left:0; bottom:0; background-color:blue}
+main button[type="button"] {padding:20px; color:#fff; background-color:#000;}
+</style>
 <body>
-    index
+    <div id="wrap">
+        <header>
+            header
+        </header>
+        <main>
+            <div>
+                <button type="button" onclick="popupOpen('.popup-alert')">얼럿</button>
+
+                <button type="button" onclick="popupOpen('.popup-half')">반팝업</button>
+                main <br>
+                main main <br>
+                main main main <br>
+                main main main main <br>
+                main main main main main <br>
+                main main main main main main <br>
+                main main main main main main main <br>
+                main main main main main main main main <br>
+                main main main main main main main main main <br>
+                main <br>
+                main main <br>
+                main main main <br>
+                main main main main <br>
+                main main main main main <br>
+                main main main main main main <br>
+                main main main main main main main <br>
+                main main main main main main main main <br>
+                main main main main main main main main main <br>
+                main <br>
+                main main <br>
+                main main main <br>
+                main main main main <br>
+                main main main main main <br>
+                main main main main main main <br>
+                main main main main main main main <br>
+                main main main main main main main main <br>
+                main main main main main main main main main <br>
+                main <br>
+                main main <br>
+                main main main <br>
+                main main main main <br>
+                main main main main main <br>
+                main main main main main main <br>
+                main main main main main main main <br>
+                main main main main main main main main <br>
+                main main main main main main main main main <br>
+                main <br>
+                main main <br>
+                main main main <br>
+                main main main main <br>
+                main main main main main <br>
+                main main main main main main <br>
+                main main main main main main main <br>
+                main main main main main main main main <br>
+                main main main main main main main main main <br>
+                main <br>
+                main main <br>
+                main main main <br>
+                main main main main <br>
+                main main main main main <br>
+                main main main main main main <br>
+                main main main main main main main <br>
+                main main main main main main main main <br>
+                main main main main main main main main main <br>
+                main <br>
+                main main <br>
+                main main main <br>
+                main main main main <br>
+                main main main main main <br>
+                main main main main main main <br>
+                main main main main main main main <br>
+                main main main main main main main main <br>
+                main main main main main main main main main <br>
+                main <br>
+                main main <br>
+                main main main <br>
+                main main main main <br>
+                main main main main main <br>
+                main main main main main main <br>
+                main main main main main main main <br>
+                main main main main main main main main <br>
+                main main main main main main main main main <br>
+                main <br>
+                main main <br>
+                main main main <br>
+                main main main main <br>
+                main main main main main <br>
+                main main main main main main <br>
+                main main main main main main main <br>
+                main main main main main main main main <br>
+                main main main main main main main main main <br>
+                main <br>
+                main main <br>
+                main main main <br>
+                main main main main <br>
+                main main main main main <br>
+                main main main main main main <br>
+                main main main main main main main <br>
+                main main main main main main main main <br>
+                main main main main main main main main main <br>
+                main <br>
+                main main <br>
+                main main main <br>
+                main main main main <br>
+                main main main main main <br>
+                main main main main main main <br>
+                main main main main main main main <br>
+                main main main main main main main main <br>
+                main main main main main main main main main <br>
+                main <br>
+                main main <br>
+                main main main <br>
+                main main main main <br>
+                main main main main main <br>
+                main main main main main main <br>
+                main main main main main main main <br>
+                main main main main main main main main <br>
+                main main main main main main main main main <br>
+                main <br>
+                main main <br>
+                main main main <br>
+                main main main main <br>
+                main main main main main <br>
+                main main main main main main <br>
+                main main main main main main main <br>
+                main main main main main main main main <br>
+                main main main main main main main main main <br>
+                main <br>
+                main main <br>
+                main main main <br>
+                main main main main <br>
+                main main main main main <br>
+                main main main main main main <br>
+                main main main main main main main <br>
+                main main main main main main main main <br>
+                main main main main main main main main main <br>
+            </div>
+        </main>
+        <footer>
+            footer
+        </footer>
+    </div><!-- // #wrap -->
+<style>
+.layer-popup {position:fixed; left:0; top:0; }
+.layer-popup .layer-inner {z-index:9999;}
+.layer-popup.popup-alert {width:100%; height:100%; display:none;}
+.layer-popup.popup-alert.active {display:block;}
+
+.layer-popup.popup-half {}
+.layer-popup.popup-half.active {}
+
+
+.layer-popup.popup-alert .layer-inner {width:100%; padding:50px 0; background-color:#fff; position:fixed; left:50%; top:50%; transform:translate(-50%,-50%);}
+.layer-popup.popup-half .layer-inner {width:100%; position:fixed; left:0; bottom:0; transform:translateY(100%); background-color:#fff; transition: transform 0.3s ease-in-out;}
+.layer-popup.popup-half.active .layer-inner {transform:translateY(0); transition:transform ease-in-out .3s;}
+
+.layer-popup .dim {width:100%; height:100%; position:fixed; left:0; top:0; background-color:rgba(0,0,0,0.7); z-index:9000}
+</style>
+</style>
+<script>
+    function fadeInElement(element, callback) {
+        $(element).hide().fadeIn(100).promise().done(callback);
+    }
+
+    function fadeOutElement(element, callback) {
+        $(element).fadeOut(100).promise().done(callback);
+    }
+
+    function popupOpen(target) {
+        $('body').addClass('overflow');
+        fadeInElement(target, function() {
+            $(this).addClass('active');
+        });
+        $(target).append('<div class="dim"></div>');
+        fadeInElement('.dim');
+    }
+
+    function popupClose(target) {
+        $('body').removeClass('overflow');
+        fadeOutElement(target, function() {
+            $(this).removeClass('active');
+        });
+        fadeOutElement('.dim', function() {
+            $(this).remove();
+        });
+    }
+
+    $(document).on('click', '.dim', function() {
+        var parentPopup = $(this).parent('.layer-popup');
+        if (parentPopup.attr('autoClose') !== undefined) {
+            fadeOutElement(parentPopup, function() {
+                $(this).removeClass('active');
+            });
+            fadeOutElement('.dim', function() {
+                $(this).remove();
+            });
+        }
+    });
+</script>
+
+    <div class="layer-popup popup-alert" autoClose><!--autoClose 딤 클릭 시 닫기 -->
+        <div class="layer-inner">
+            <button type="button" style="background-color:#000; color:#fff; padding:20px;" onclick="popupClose('.popup-alert')">닫기</button>
+        </div>
+    </div>
+
+    <div class="layer-popup popup-half">
+        <div class="layer-inner">
+            내용<br>
+            내용<br>
+            내용<br>
+            내용<br>
+            내용<br>
+            내용<br>
+            내용<br>
+            내용<br>
+            내용<br>
+            <button type="button" style="background-color:#000; color:#fff; padding:20px;" onclick="popupClose('.popup-half')">닫기</button>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -4,7 +4,7 @@
 .login-area .login-field {margin-top:2.25rem; display:flex; flex-direction: column; gap:0.5rem;}
 .login-buttons {margin-top:2.25rem; display:flex; flex-direction: column; gap:0.5rem;}
 .login-buttons .svg-google {position:absolute; left:1rem; top:50%; transform:translateY(-50%)}
-.login-user-action {margin-top:1.5rem; display:flex; justify-content: center;}
+.login-user-action {margin-top:1.5rem; padding-bottom:3rem; display:flex; justify-content: center;}
 .login-user-action button {font-size: 0.9375rem; line-height: 1.4375rem;}
 .login-user-action button + button {margin-left:1rem; padding-left:1rem; position:relative;}
 .login-user-action button + button:before {content:''; width:1px; height: 0.625rem; display:block; position:absolute; left:0; top:50%; transform:translateY(-50%); background-color:#C7C7C7;}

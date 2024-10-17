@@ -8,8 +8,6 @@
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
     <title>Becon_Cloud</title>
-    <script src="../js/jquery-3.7.0.min.js"></script>
-    <script src="../js/script.js"></script>
     <link href="../css/style.css" rel="stylesheet">
 </head>
 <style>
@@ -180,46 +178,6 @@ main button[type="button"] {padding:20px; color:#fff; background-color:#000;}
 .layer-popup .dim {width:100%; height:100%; position:fixed; left:0; top:0; background-color:rgba(0,0,0,0.7); z-index:9000}
 </style>
 </style>
-<script>
-    function fadeInElement(element, callback) {
-        $(element).hide().fadeIn(100).promise().done(callback);
-    }
-
-    function fadeOutElement(element, callback) {
-        $(element).fadeOut(100).promise().done(callback);
-    }
-
-    function popupOpen(target) {
-        $('body').addClass('overflow');
-        fadeInElement(target, function() {
-            $(this).addClass('active');
-        });
-        $(target).append('<div class="dim"></div>');
-        fadeInElement('.dim');
-    }
-
-    function popupClose(target) {
-        $('body').removeClass('overflow');
-        fadeOutElement(target, function() {
-            $(this).removeClass('active');
-        });
-        fadeOutElement('.dim', function() {
-            $(this).remove();
-        });
-    }
-
-    $(document).on('click', '.dim', function() {
-        var parentPopup = $(this).parent('.layer-popup');
-        if (parentPopup.attr('autoClose') !== undefined) {
-            fadeOutElement(parentPopup, function() {
-                $(this).removeClass('active');
-            });
-            fadeOutElement('.dim', function() {
-                $(this).remove();
-            });
-        }
-    });
-</script>
 
     <div class="layer-popup popup-alert" autoClose><!--autoClose 딤 클릭 시 닫기 -->
         <div class="layer-inner">

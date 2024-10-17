@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover'">
+    <meta name="apple-mobile-web-app-title" content="타이틀">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <title>Becon_Cloud</title>
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray">
+    <div id="wrap">
+        <main class="login-area">
+            <h1 class="logo"><span class="txt-hidden">LG BECON cloud</span></h1>
+
+            <div class="login-field">
+                <div class="common-text-field">
+                    <input type="email" placeholder="이메일">
+                    <p class="invalid-msg">
+                        <i class="svg-important"></i>
+                        이메일을 확인해 주세요.
+                    </p>
+                </div>
+
+                <div class="common-text-field is-invalid"><!-- is-invalid class : 잘못된 값 -->
+                    <input type="password" placeholder="비밀번호">
+                    <p class="invalid-msg">
+                        <i class="svg-important"></i>
+                        비밀번호에 동일 문자 3자 이상 사용 불가
+                    </p>
+                </div>
+
+                <div class="common-checkbox">
+                    <input type="checkbox" id="checkbox01">
+                    <label for="checkbox01">체크박스</label>
+                </div>
+            </div>
+
+            <div class="login-buttons">
+                <button type="button" class="common-btn">로그인</button>
+                <button type="button" class="common-btn btn-white is-google">
+                    <i class="svg-google"></i>
+                    Google 로그인
+                </button>
+            </div>
+
+            <div class="login-user-action">
+                <button type="button">회원가입</button>
+                <button type="button">이메일 • 비밀번호찾기</button>
+            </div>
+        </main>
+    </div><!-- // #wrap -->
+</body>
+
+</html>

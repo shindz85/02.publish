@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'LGSmHaTL';
+    src: url("../fonts/LGSmHaTL.woff2") format("woff2"),
+         url("../fonts/LGSmHaTL.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'LGSmHaTR';
+    src: url("../fonts/LGSmHaTR.woff2") format("woff2"),
+         url("../fonts/LGSmHaTR.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'LGSmHaTSB';
+    src: url("../fonts/LGSmHaTSB.woff2") format("woff2"),
+         url("../fonts/LGSmHaTSB.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'LGSmHaTB';
+    src: url("../fonts/LGSmHaTB.woff2") format("woff2"),
+         url("../fonts/LGSmHaTB.woff") format("woff");
+}

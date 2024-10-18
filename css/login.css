@@ -5,6 +5,13 @@
 .login-buttons {margin-top:2.25rem; display:flex; flex-direction: column; gap:0.5rem;}
 .login-buttons .svg-google {position:absolute; left:1rem; top:50%; transform:translateY(-50%)}
 .login-user-action {margin-top:1.5rem; padding-bottom:3rem; display:flex; justify-content: center;}
-.login-user-action button {font-size: 0.9375rem; line-height: 1.4375rem;}
-.login-user-action button + button {margin-left:1rem; padding-left:1rem; position:relative;}
-.login-user-action button + button:before {content:''; width:1px; height: 0.625rem; display:block; position:absolute; left:0; top:50%; transform:translateY(-50%); background-color:#C7C7C7;}
+.login-user-action a {font-size: 0.9375rem; line-height: 1.4375rem;}
+.login-user-action a + a {margin-left:1rem; padding-left:1rem; position:relative;}
+.login-user-action a + a:before {content:''; width:1px; height: 0.625rem; display:block; position:absolute; left:0; top:50%; transform:translateY(-50%); background-color:#C7C7C7;}
+
+.member-info-area .member-info-box {height:2rem; padding-left:0.28rem; display:flex; align-items:center; gap:0.5rem;}
+.member-info-area .member-info-box .member-info-text {font-size: 1.1875rem; line-height: 1.6875rem; color:#000;}
+.member-info-area .member-info-text1 {margin-top:1rem; font-size: 0.9375rem; line-height: 1.4375rem; color:#000;}
+.member-info-area .member-info-text2 {font-size: 0.9375rem; line-height: 1.4375rem; color:#404040;}
+.member-info-area .common-text-field,
+.member-info-area .common-btn-area {margin-top:1rem;}

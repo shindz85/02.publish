@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover'">
+    <meta name="apple-mobile-web-app-title" content="타이틀">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <title>Becon_Cloud</title>
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <button type="button" class="btn-history-back">
+                <i class="svg-back"></i>
+                <span class="txt-hidden">이전</span>
+            </button>
+            <h1 class="header-title">이메일/비밀번호 찾기</h1>
+        </header>
+        <main id="container">
+            <div class="tab-group-area">
+                <button class="btn-tab active" type="button">이메일 찾기</button><!-- active class 활성 -->
+                <button class="btn-tab" type="button">비밀번호 찾기</button>
+            </div>
+            <div class="container-inner is-py member-info-area">
+                <div class="member-info-box">
+                    <i class="svg-engineer"></i>
+                    <p class="member-info-text font-bold">엔지니어</p>
+                </div>
+                <p class="member-info-text1 font-bold">이메일로 찾기</p>
+                <p class="member-info-text2">회원가입한 이메일을 입력해 주세요.</p>
+
+                <div class="common-text-field is-success"><!-- is-success, is-invalid 추가시 메시지 활성 -->
+                    <input type="email" placeholder="이메일">
+                    <p class="success-msg">
+                        <i class="svg-success"></i>
+                        사용할 수 있는 이메일입니다.
+                    </p>
+                    <p class="invalid-msg">
+                        <i class="svg-important"></i>
+                        이메일을 입력하세요.
+                    </p>
+                </div>
+
+                <div class="common-btn-area">
+                    <button type="button" class="common-btn">확인</button>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>

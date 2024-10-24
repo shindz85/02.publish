@@ -39,9 +39,19 @@ h1 {margin-bottom:16px;}
 
                 <h1 style="font-size:2rem">체크박스</h1>
                 <div>
-                    <div class="common-checkbox">
+                    <div class="common-checkbox is-bold">
                         <input type="checkbox" id="checkbox01">
-                        <label for="checkbox01">체크박스</label>
+                        <label for="checkbox01" class="font-bold">체크박스</label>
+                    </div>
+
+                    <div class="common-checkbox">
+                        <input type="checkbox" id="checkbox02">
+                        <label for="checkbox02">체크박스</label>
+                    </div>
+
+                    <div class="common-checkbox is-small">
+                        <input type="checkbox" id="checkbox03">
+                        <label for="checkbox03">[필수] BECON Cloud 이용약관</label>
                     </div>
                 </div>
 
@@ -109,6 +119,16 @@ h1 {margin-bottom:16px;}
                 <p>단독으로 쓰는 경우</p>
                 <br>
                 <div>
+
+                    <div class="button-select-area">
+                        <p class="common-label font-bold">국가 선택</p>
+                        <div class="button-select-inner">
+                            <button type="button" class="button-select">국가를 선택해 주세요.</button> <!--값이 선택 된 후 active class 추가-->
+                        </div>
+                    </div>
+
+                    <br>
+
                     <div class="common-text-field">
                         <div class="text-field-inner">
                             <input type="text" placeholder="이메일">
@@ -163,6 +183,18 @@ h1 {margin-bottom:16px;}
                         <p class="input-guide-msg is-invalid">
                             기존 비밀번호를 입력하세요.
                         </p>
+                    </div>
+
+                    <div class="common-text-field">
+                        <p class="common-label font-bold">비밀번호 확인</p>
+                        <div class="form-box-area">
+                            <div class="text-field-inner">
+                                <input type="text" placeholder="성">
+                            </div>
+                            <div class="text-field-inner">
+                                <input type="text" placeholder="이름">
+                            </div>
+                        </div>
                     </div>
 
                     <br>
